@@ -40,19 +40,19 @@ def scrape_dyme_searches(start_date_str):
 
     try:
         wait = WebDriverWait(driver, 90)
-        driver.get("https://app.dyme.earth/")
+        driver.get("https://app")
         print("Loaded login page")
 
         # Login process
         email_input = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'input[type="email"]')))
-        email_input.send_keys("chloe@dyme.travel")
+        email_input.send_keys("")
         print("Entered email")
         
         wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "Button"))).click()
         print("Clicked login button 1")
 
         password_input = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'input[type="password"]')))
-        password_input.send_keys("zRvyy89wduD5K2L")
+        password_input.send_keys("")
         print("Entered password")
         
         wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "Button"))).click()
@@ -81,7 +81,7 @@ def scrape_dyme_searches(start_date_str):
         print(f"Final URL before navigation: {driver.current_url}")
 
         # Navigate to searches page
-        driver.get("https://booking.dyme.earth/searches")
+        driver.get("https://booking")
         print("Navigated to searches page")
         time.sleep(5)
 
