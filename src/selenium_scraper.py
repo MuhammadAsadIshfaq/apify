@@ -39,21 +39,21 @@
 
 #     try:
 #         wait = WebDriverWait(driver, 90)
-#         driver.get("https://app.dyme.earth/")
+#         driver.get("https://app")
 
 #         # Login process
 #         email_input = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'input[type="email"]')))
-#         email_input.send_keys("chloe@dyme.travel")
+#         email_input.send_keys("")
 #         wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "Button"))).click()
 
 #         password_input = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'input[type="password"]')))
-#         password_input.send_keys("zRvyy89wduD5K2L")
+#         password_input.send_keys("")
 #         wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "Button"))).click()
 
 #         wait.until(EC.presence_of_element_located((By.CLASS_NAME, "bgImgContainer")))
 
 #         # Navigate to searches page
-#         driver.get("https://booking.dyme.earth/searches")
+#         driver.get("")
 
 #         while True:
 #             wait.until(EC.visibility_of_element_located((By.CLASS_NAME, "custom-advance-table-body")))
@@ -147,19 +147,19 @@ def main(start_date_str):
 
     try:
         wait = WebDriverWait(driver, 90)  # Restore original timeout
-        driver.get("https://app.dyme.earth/")
+        driver.get("https://app")
         print("Loaded login page")
 
         # Login process
         email_input = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'input[type="email"]')))
-        email_input.send_keys("chloe@dyme.travel")
+        email_input.send_keys("")
         print("Entered email")
         
         wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "Button"))).click()
         print("Clicked login button 1")
 
         password_input = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'input[type="password"]')))
-        password_input.send_keys("zRvyy89wduD5K2L")
+        password_input.send_keys("")
         print("Entered password")
         
         wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "Button"))).click()
@@ -195,7 +195,7 @@ def main(start_date_str):
         print(f"Final URL before navigation: {driver.current_url}")
 
         # Now navigate to searches page
-        driver.get("https://booking.dyme.earth/searches")
+        driver.get("https://booking")
         print("Navigated to searches page")
         
         # Give the page more time to load
