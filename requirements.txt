@@ -1,6 +1,10 @@
 # Feel free to add your Python dependencies below. For formatting guidelines, see:
 # https://pip.pypa.io/en/latest/reference/requirements-file-format/
 
-apify < 3.0
-selenium
-webdriver-manager
+# apify < 3.0
+# selenium
+# webdriver-manager
+
+apify==1.7.2
+selenium==4.25.0
+webdriver-manager==4.0.2
